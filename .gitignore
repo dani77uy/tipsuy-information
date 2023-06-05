@@ -1,4 +1,6 @@
 target/
+/logs
+/out
 !**/src/main/**/target/
 !**/src/test/**/target/
 

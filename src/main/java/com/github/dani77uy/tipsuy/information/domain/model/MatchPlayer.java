@@ -3,17 +3,22 @@ package com.github.dani77uy.tipsuy.information.domain.model;
 import java.io.Serial;
 import java.io.Serializable;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import lombok.Data;
 
+@Document("match_player")
 @Data
 public class MatchPlayer implements Serializable {
 
    @Serial
    private static final long serialVersionUID = -3767115019477251232L;
 
-   private Player player;
-
+   @Id
    private int number;
+
+   private Player player;
 
    private double ranking;
 
@@ -25,7 +30,7 @@ public class MatchPlayer implements Serializable {
 
    private boolean wasBookedWithRC;
 
-   private boolean wasHeaded;
+   private boolean wasInHeadLine;
 
    private boolean wasSubstitute;
 
@@ -34,4 +39,5 @@ public class MatchPlayer implements Serializable {
    private boolean wasOnTheBench;
 
    private boolean wasInjured;
+
 }

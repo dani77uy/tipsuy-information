@@ -5,14 +5,19 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import lombok.Data;
 
+@Document("match")
 @Data
 public class Match implements Serializable {
 
    @Serial
    private static final long serialVersionUID = -1887992922741726313L;
 
+   @Id
    private long id;
 
    private Tournament tournament;
@@ -30,5 +35,9 @@ public class Match implements Serializable {
    private byte homeGoals;
 
    private byte awayGoals;
+
+   private boolean isInNeutralVenue;
+
+   private PlayoffPosition playOffPosition;
 
 }
