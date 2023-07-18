@@ -30,8 +30,8 @@ public class Team implements Serializable {
    @Schema(name = "strategy", example = "4-4-2", minLength = 1, maxLength = 10, description = "The team main strategy.")
    private Strategy strategy;
 
-   @Schema(name = "country", example = "UY", minLength = 1, maxLength = 2, description = "The team location country code.")
-   private CountryCode country;
+   @Schema(name = "city")
+   private City city;
 
 
 

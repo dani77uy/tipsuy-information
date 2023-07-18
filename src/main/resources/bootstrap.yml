@@ -1,0 +1,22 @@
+spring:
+  config:
+    import: vault://
+  cloud:
+    vault:
+      enabled: true
+      uri: http://localhost:8200
+      token: hvs.afUIyKjUUM1equykEssPJLFE
+      authentication: token
+      application-name: tipsuy
+      kv:
+        enabled: true
+        backend: secret
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,refresh,env
+  endpoint:
+    env:
+      post:
+        enabled: true

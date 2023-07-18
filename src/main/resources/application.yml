@@ -1,0 +1,26 @@
+server:
+  address: 0.0.0.0
+  port: 8431
+  servlet:
+    context-path: /tipsuy/information
+  tomcat:
+    accept-count: 100
+    max-connections: 10000
+spring:
+  cloud:
+    config:
+      enabled: false
+springdoc:
+  api-docs:
+    enabled: true
+    path: "/api-docs"
+  swagger-ui:
+    path: "/swagger-ui-custom.html"
+app:
+  mongodb:
+    uri: "mongodb+srv://${username}:${password}@${database}.${host}/?retryWrites=true&w=majority"
+    database: "${database}"
+  external:
+    url:
+      countryInfo: "http://download.geonames.org/export/dump/countryInfo.txt"
+      cities: "http://download.geonames.org/export/dump/cities15000.zip"
